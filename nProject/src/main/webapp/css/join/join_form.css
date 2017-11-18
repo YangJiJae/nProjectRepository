@@ -1,0 +1,179 @@
+@CHARSET "UTF-8";
+
+/*placeholder만 색상변경*/
+::-webkit-input-placeholder { /* 크롬 */
+	color:#A6A6A6;
+}
+:-moz-placeholder { /* 파이어폭스 */
+	color:#A6A6A6;
+	opacity:  1;
+}
+::-moz-placeholder { /* 파이어폭스 */
+	color:#A6A6A6;
+	opacity:  1;
+}
+:-ms-input-placeholder { /* 인터넷 익스플로러 */
+	color:#A6A6A6;
+}
+::placeholder {
+	color:#A6A6A6;
+	opacity:  1;
+}
+#join_main_body{
+	background-color:#F6F6F6;
+}
+#join_form_title{
+	height:50px;
+	border-bottom:1px solid #D5D5D5;
+	text-align:center;
+	color:#353535;
+}
+#join_form_typeTot{
+	margin:auto;
+	max-width:420px;
+	width:90%;
+	height:47px;
+	list-style-type:none;
+	border:1px solid #D5D5D5;
+	text-align:center;
+}
+#join_form_type1,#join_form_type2{
+	float:left;
+	width:50%;
+	line-height:45px;
+	text-align:center;
+	cursor:pointer;
+	color:#BDBDBD;
+}
+#join_form_type1{
+	border-right:1px solid #D5D5D5;
+	background-color:#368D9C;
+	color:#fff;
+}
+#join_form_type1:hover,#join_form_type2:hover{
+	background-color:#247B8A;
+	color:#ffffff;
+}
+.join_form_conTot{
+	margin:auto;
+	margin-top:20px;
+	max-width:450px;
+	width:100%;
+	overflow:hidden;
+	margin-bottom:50px;
+	text-align:center;
+}
+#join_form_telType,#join_form_emType{
+	display:inline-block;
+	width:45%;
+	line-height:40px;
+	list-style-type:none;
+	text-align:center;
+	cursor:pointer;
+	margin-bottom:20px;
+	margin-right:-4px;
+}
+#join_form_telType{
+	border-top:1px solid #A6A6A6;
+	border-left:1px solid #A6A6A6;
+	border-right:1px solid #A6A6A6;
+	color:#368D9C;
+}
+#join_form_emType{
+	border-bottom:1px solid #A6A6A6;
+	color:#A6A6A6;
+}
+#join_form_tel,#join_form_email,#join_form_name
+,#join_form_pw,#join_form_pwc{
+	display:inline-block;
+	width:90%;
+	height:42px;
+	margin-bottom:5px;
+	border:1px solid #BDBDBD;
+	padding-left:10px;
+}
+#join_form_email{
+	display:none;
+}
+#join_form_tel_text,#join_form_email_text,#join_form_name_text
+,#join_form_pw_text,#join_form_pwc_text{
+	margin:auto;
+	width:80%;
+	margin-bottom:10px;
+	list-style-type:none;
+	color:#ff0000;
+	font-size:13px;
+	display:none;
+	text-align:left;
+	display:none;
+}
+#join_form_agreeAllCheck_Tot{
+	margin:auto;
+	margin-top:30px;
+	width:90%;
+	height:40px;
+	padding-top:10px;
+	border-bottom:1px solid #D5D5D5;
+	background-color:#EAEAEA;
+}
+#join_form_agreeAllCheck{
+	float:left;
+	margin-right:10px;
+	margin-left:10px;
+	width:22px;
+	height:22px;
+	border:1px solid #D5D5D5;
+	cursor:pointer;
+	background-color:#ffffff;
+}
+#join_form_checkImg1{
+	margin-top:2px;
+	margin-left:3px;
+	font-size:14px;
+	color:#E7E7E7;
+}
+#join_form_agreeAllCheckText{
+	float:left;
+	color:#6F6F6F;
+	font-weight:bold;
+}
+#join_form_agreeCheck_Tot{
+	margin:auto;
+	max-width:420px;
+	width:90%;
+	color:#353535;
+}
+#join_form_agreeCheck1,#join_form_agreeCheck2{
+	float:left;
+	margin-left:15px;
+	margin-right:10px;
+	width:20px;
+	height:20px;
+	border:1px solid #D5D5D5;
+	background-color:#fff;
+	cursor:pointer;	
+}
+#join_form_checkImg2{
+	margin-left:3px;
+	font-size:13px;
+	color:#E7E7E7;
+}
+#join_form_agreeCheck1:hover,#join_form_agreeCheck2:hover,#join_form_agreeAllCheck:hover{
+	border:1px solid #368D9C;
+}
+#join_form_agreeCheckText1,#join_form_agreeCheckText2{
+	float:left;
+}
+#join_form_agreeCheckText1:hover,#join_form_agreeCheckText2:hover{
+	text-decoration:underline;
+	cursor:pointer;	
+}
+#join_form_joinGoBtn{
+	display:inline-block;
+	width:90%;
+	height:45px;
+	background-color:#368D9C;
+	color:#fff;
+	border:1px solid #247B8A;
+	margin-top:40px;
+}

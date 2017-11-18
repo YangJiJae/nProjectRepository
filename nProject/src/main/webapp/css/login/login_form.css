@@ -1,0 +1,110 @@
+@CHARSET "UTF-8";
+
+/*placeholder만 색상변경*/
+::-webkit-input-placeholder { /* 크롬 */
+	color:#A6A6A6;
+}
+:-moz-placeholder { /* 파이어폭스 */
+	color:#A6A6A6;
+	opacity:  1;
+}
+::-moz-placeholder { /* 파이어폭스 */
+	color:#A6A6A6;
+	opacity:  1;
+}
+:-ms-input-placeholder { /* 인터넷 익스플로러 */
+	color:#A6A6A6;
+}
+::placeholder {
+	color:#A6A6A6;
+	opacity:  1;
+}
+#login_main_body{
+	background-color:#F6F6F6;
+}
+#login_form_title{
+	height:50px;
+	border-bottom:1px solid #D5D5D5;
+	text-align:center;
+	color:#353535;
+}
+.login_form_conTot{
+	margin:auto;
+	margin-top:60px;
+	max-width:450px;
+	width:100%;
+	overflow:hidden;
+	margin-bottom:50px;
+	text-align:center;
+}
+#login_form_userType,#login_form_companyType{
+	display:inline-block;
+	width:45%;
+	line-height:40px;
+	list-style-type:none;
+	text-align:center;
+	cursor:pointer;
+	margin-bottom:50px;
+	margin-right:-4px;
+}
+#login_form_userType{
+	border-top:1px solid #A6A6A6;
+	border-left:1px solid #A6A6A6;
+	border-right:1px solid #A6A6A6;
+	color:#368D9C;
+}
+#login_form_companyType{
+	border-bottom:1px solid #A6A6A6;
+	color:#A6A6A6;
+}
+#login_form_id,#login_form_pw{
+	display:inline-block;
+	width:90%;
+	height:42px;
+	margin-bottom:20px;
+	border:1px solid #BDBDBD;
+	padding-left:10px;
+}
+#login_form_comid{
+	display:none;
+	width:90%;
+	height:42px;
+	margin-bottom:20px;
+	border:1px solid #BDBDBD;
+	padding-left:10px;
+}
+#login_form_idtot_text,#login_form_pw_text{
+	margin:auto;
+	width:80%;
+	margin-bottom:20px;
+	list-style-type:none;
+	color:#ff0000;
+	font-size:13px;
+	text-align:left;
+	display:none;
+}
+#login_form_loginGoBtn{
+	display:inline-block;
+	width:90%;
+	height:45px;
+	background-color:#368D9C;
+	color:#fff;
+	border:1px solid #247B8A;
+	margin-top:30px;
+	margin-bottom:40px;
+}
+#login_form_joinBtn,#login_form_searchIdBtn,#login_form_searchPwBtn{
+	display:inline-block;
+	width:90%;
+	text-align:left;
+	font-size:13px;
+	color:#368D9C;
+	cursor:pointer;
+	margin-bottom:10px;
+}
+#login_form_searchPwBtn{
+	margin-bottom:40px;
+}
+#login_form_joinBtn:hover,#login_form_searchIdBtn:hover,#login_form_searchPwBtn:hover{
+	color:#9D3636;
+}

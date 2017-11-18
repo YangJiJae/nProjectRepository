@@ -1,0 +1,10 @@
+@CHARSET "UTF-8";
+
+/*상단공백 발생시 인코딩 utf-8 bom없음으로 변경*/
+html,body{
+	margin:0px;
+	padding:0px;
+}
+a{
+	text-decoration:none;
+}

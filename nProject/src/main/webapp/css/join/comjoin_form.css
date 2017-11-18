@@ -1,0 +1,136 @@
+@CHARSET "UTF-8";
+
+/*placeholder만 색상변경*/
+::-webkit-input-placeholder { /* 크롬 */
+	color:#A6A6A6;
+}
+:-moz-placeholder { /* 파이어폭스 */
+	color:#A6A6A6;
+	opacity:  1;
+}
+::-moz-placeholder { /* 파이어폭스 */
+	color:#A6A6A6;
+	opacity:  1;
+}
+:-ms-input-placeholder { /* 인터넷 익스플로러 */
+	color:#A6A6A6;
+}
+::placeholder {
+	color:#A6A6A6;
+	opacity:  1;
+}
+#comjoin_main_body{
+	background-color:#F6F6F6;
+}
+#comjoin_form_title{
+	height:50px;
+	border-bottom:1px solid #D5D5D5;
+	text-align:center;
+	color:#353535;
+}
+.comjoin_form_conTot{
+	margin:auto;
+	margin-top:20px;
+	max-width:450px;
+	width:100%;
+	overflow:hidden;
+	margin-bottom:50px;
+	text-align:center;
+}
+#comjoin_form_comTel,#comjoin_form_comEmail,#comjoin_form_comCaptainName
+,#comjoin_form_comOfficName,#comjoin_form_comPw,#comjoin_form_comPwc
+,#comjoin_form_comOfficTel,#comjoin_form_comId,#comjoin_form_comOfficAddress{
+	display:inline-block;
+	width:90%;
+	height:42px;
+	margin-bottom:5px;
+	border:1px solid #BDBDBD;
+	padding-left:10px;
+}
+#comjoin_form_comTel{
+	margin-top:20px;
+}
+#comjoin_form_comTel_text,#comjoin_form_comEmail_text
+,#comjoin_form_comPw_text,#comjoin_form_comPwc_text
+,#comjoin_form_comCaptainName_text,#comjoin_form_comOfficName_text
+,#comjoin_form_comOfficAddress_text,#comjoin_form_comOfficTel_text
+,#comjoin_form_comId_text{
+	margin:auto;
+	width:80%;
+	margin-bottom:10px;
+	list-style-type:none;
+	color:#ff0000;
+	font-size:13px;
+	text-align:left;
+	display:none;
+}
+#comjoin_form_agreeAllCheck_Tot{
+	margin:auto;
+	margin-top:30px;
+	width:90%;
+	height:40px;
+	padding-top:10px;
+	border-bottom:1px solid #D5D5D5;
+	background-color:#EAEAEA;
+}
+#comjoin_form_agreeAllCheck{
+	float:left;
+	margin-right:10px;
+	margin-left:10px;
+	width:22px;
+	height:22px;
+	border:1px solid #D5D5D5;
+	cursor:pointer;
+	background-color:#ffffff;
+}
+#comjoin_form_checkImg1{
+	margin-top:2px;
+	margin-left:3px;
+	font-size:14px;
+	color:#E7E7E7;
+}
+#comjoin_form_agreeAllCheckText{
+	float:left;
+	color:#6F6F6F;
+	font-weight:bold;
+}
+#comjoin_form_agreeCheck_Tot{
+	margin:auto;
+	max-width:420px;
+	width:90%;
+	color:#353535;
+}
+#comjoin_form_agreeCheck1,#comjoin_form_agreeCheck2{
+	float:left;
+	margin-left:15px;
+	margin-right:10px;
+	width:20px;
+	height:20px;
+	border:1px solid #D5D5D5;
+	background-color:#fff;
+	cursor:pointer;	
+}
+#comjoin_form_checkImg2{
+	margin-left:3px;
+	font-size:13px;
+	color:#E7E7E7;
+}
+#comjoin_form_agreeCheck1:hover,#comjoin_form_agreeCheck2:hover,#comjoin_form_agreeAllCheck:hover{
+	border:1px solid #368D9C;
+}
+#comjoin_form_agreeCheckText1,#comjoin_form_agreeCheckText2{
+	float:left;
+}
+#comjoin_form_agreeCheckText1:hover,#comjoin_form_agreeCheckText2:hover{
+	text-decoration:underline;
+	cursor:pointer;	
+}
+#comjoin_form_joinGoBtn{
+	display:inline-block;
+	width:90%;
+	height:45px;
+	background-color:#368D9C;
+	color:#fff;
+	border:1px solid #247B8A;
+	margin-top:40px;
+}
