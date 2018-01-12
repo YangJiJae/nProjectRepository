@@ -1,60 +1,109 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
-<%
-String userid=(String)session.getAttribute("id");
-%>
 <!DOCTYPE html>
 <html>
 <head>
-<meta charset=UTF-8">
+<meta charset="UTF-8">
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
-<%@ taglib prefix="fn" uri="http://java.sun.com/jsp/jstl/functions" %>  
-<%@ taglib prefix="ui" uri="http://egovframework.gov/ctl/ui" %>
-
-<!-- jQuery -->
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
-<script src="<c:url value='/js/common.js'/>" charset="utf-8"></script>
-<script src="<c:url value='/bootstrap/js/bootstrap.js'/>" ></script>
-<script src="<c:url value='/js/main/header_main.js'/>" ></script>
-
-<link rel="stylesheet" type="text/css" href="<c:url value='/bootstrap/css/bootstrap.css'/>" />
 <link rel="stylesheet" type="text/css" href="<c:url value='/css/main/header_main.css'/>" />
+
+<script type="text/javascript">
+$(document).ready(function(){
+	$("#header_main_menuBtn").on("click", function(e){
+		var userid = '${ID}';
+		var conH=document.getElementById("header_main_menucon");
+		var totH;
+		
+		if(userid=="null" || userid=="" || userid==null){//로그인 안했을 때
+			var loginH=document.getElementById("header_main_login").offsetHeight;
+			var joinH=document.getElementById("header_main_join").offsetHeight;
+			totH=10+loginH+joinH+"px";
+		}else{//로그인 했을 때
+			var usreInfoH=document.getElementById("header_main_userInfo").offsetHeight;
+			var logoutH=document.getElementById("header_main_logout").offsetHeight;
+			totH=10+logoutH+usreInfoH+"px";
+		}
+		//슬라이드 창 관련
+		if(conH.style.height==totH){
+			conH.style.height="0px";//0되면 슬라이드 닫힘
+		}else{
+			conH.style.height=totH;//높이주면 슬라이드열려
+		}
+	});
+	$("#loginBtn").on("click", function(e){
+		e.preventDefault();
+		var comSubmit = new ComSubmit();
+		comSubmit.setUrl("<c:url value='/login_form.do' />");
+		comSubmit.submit();
+	});
+	$("#mainGo").on("click", function(e){
+		e.preventDefault();
+		var comSubmit = new ComSubmit();
+		comSubmit.setUrl("<c:url value='/main.do' />");
+		comSubmit.submit();
+	});
+	
+	$("#joinBtn").on("click", function(e){
+		e.preventDefault();
+		var comSubmit = new ComSubmit();
+		comSubmit.setUrl("<c:url value='/join_form.do' />");
+		comSubmit.submit();
+	});
+	$("#logoutBtn").on("click", function(e){
+		var check=confirm("정말로 로그아웃 하시겠습니까?");
+		if(check){
+			e.preventDefault();
+			var comSubmit = new ComSubmit();
+			comSubmit.setUrl("<c:url value='/logout.do' />");
+			comSubmit.submit();
+		}
+	});
+	$("#myPageBtn").on("click", function(e){
+		var a = '추후 설정';
+		if(a=="user"){
+			e.preventDefault();
+			var comSubmit = new ComSubmit();
+			comSubmit.setUrl("<c:url value='/myPage_form.do' />");
+			comSubmit.submit();
+		}else if(a=="com"){
+			e.preventDefault();
+			var comSubmit = new ComSubmit();
+			comSubmit.setUrl("<c:url value='/adPage_form.do' />");
+			comSubmit.submit();
+		}
+	});
+});
+
+</script>
+
+
 </head>
 <body>
-	<div id="header_main_main">
-		<li id="header_main_title" onclick="mainPageGo()">NMM</li><!-- 로고넣을 예정 -->
-		<div id="header_main_menuBtn" data-toggle="dropdown" onclick="conshow('<%=userid%>')">
-			<span id="header_main_menuIcon" class="glyphicon glyphicon-align-justify" aria-hidden="true"></span>
+	<div class="header_main_main">
+		<li class="header_main_title" id="mainGo">NMM</li><!-- 로고넣을 예정 -->
+		<div class="header_main_menuBtn" id="header_main_menuBtn" data-toggle="dropdown">
+			<span class="header_main_menuIcon" class="glyphicon glyphicon-align-justify" aria-hidden="true"></span>
 		</div>
-		<div id="header_main_menucon">
-			<div id="header_main_menuconRight">
-			<% 
-			if(userid==null){
-				userid="";
-			%>
-				<li id="header_main_login" onclick="pagego('../login/login_form.jsp');">로그인</li>
-				<li id="header_main_join" onclick="pagego('../join/join_form.jsp');">회원가입</li>
-			<%}else if(userid!=null){
-			/* NmmDAO dao=new NmmDAOimple();
-			NmmVO vo=new NmmVO();
-			String [] sp=userid.split("/");
-			vo.setCompany_id(sp[0]);//유저든 가맹점이든 아이디 값을 넣는다
-			vo.setUcType(sp[1]);
-			String result1=dao.nicName(vo);
-			String nic=result1; */
-			String [] sp="id/idd".split("/");
-			String nic="nic";
-			%>
-				<li id="header_main_userInfo" onclick="myadPageGo('<%=sp[1]%>');"><%=nic%></li>
-				<li id="header_main_logout" onclick="logoutGo('../login/logout.jsp');">로그아웃</li>
-			<%}%>
+		<div class="header_main_menucon">
+			<div class="header_main_menuconRight">
+			
+				<c:choose>
+				    <c:when test="${empty ID}">
+				       <li class="header_main_login" id="loginBtn">로그인</li>
+						<li class="header_main_join" id="joinBtn">회원가입</li>
+				    </c:when>
+				    <c:otherwise>
+				        <li class="header_main_userInfo" id="myPageBtn">${ID}</li>
+						<li class="header_main_logout" id="logoutBtn">로그아웃</li>
+				    </c:otherwise>
+				</c:choose>
+			
 			</div>
 		</div>
 		
 		
 	</div>
 	
-
 
 </body>
 </html>

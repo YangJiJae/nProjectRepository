@@ -1,0 +1,198 @@
+@CHARSET "UTF-8";
+
+.CouPonUse_form_main{
+	margin:auto;
+	margin-bottom:50px;
+	width:100%;
+}
+.CouPonUse_form_mainTitle{
+	width:100%;
+	line-height:45px;
+	border-bottom:1px solid #CECECE;
+	list-style-type:none;
+	padding-left:10px;
+	font-size:18px;
+	font-weight:bold;
+	color:#353535;
+}
+.CouPonUse_form_textImg{
+	float:left;
+	width:5px;
+	height:14px;
+	border:1px solid #368D9C;
+	border-radius:5px 5px 5px 5px;
+	background-color:#368D9C;
+	margin-top:4px;
+	margin-right:8px;
+}
+.CouPonUse_form_optionYesNoTot{
+	margin:auto;
+	width:95%;
+	overflow:hidden;
+}
+.CouPonUse_form_optionYesNo{
+	float:left;      
+	max-width:167px;
+	width:30%;
+	list-style-type:none;
+	margin-top:10px;
+	margin-bottom:10px;
+	color:#5D5D5D;
+	font-size:14px;
+	border-right:1px solid #CECECE;
+}
+.CouPonUse_form_optionYesNoBtn{
+	float:left;
+	width:60px;
+	margin-top:10px;
+	margin-left:20px;
+	color:#fff;
+	background-color:#368D9C;
+	border:1px solid #247B8A;
+	font-size:13px;
+}
+.CouPonUse_form_linktext{
+	float:left;
+	max-width:55%;
+	word-break:break-all;/*글자 창밖으로 안나가게*/
+	list-style-type:none;
+	margin-top:10px;
+	margin-left:20px;
+	cursor:pointer;
+	color:#00c;
+}
+.CouPonUse_form_linktext:hover{
+	text-decoration:underline;
+}
+.CouPonUse_form_optionYesNo_line{
+	margin:auto;
+	width:100%;
+	height:1px;
+	border-bottom:1px solid #CECECE;
+}
+.CouPonUse_form_joinInfo{
+	margin:auto;
+	width:95%;
+	list-style-type:none;
+	margin-top:40px;
+	margin-bottom:7px;
+	color:#5D5D5D;
+	font-size:14px;
+}
+@media all and (min-width:0px) and (max-width:590px){
+	.CouPonUse_form_titleTot{
+		display:inline-block;
+		width:30%;
+		border-top:1px solid #C3C3C3;
+		border-bottom:1px solid #C3C3C3;
+		border-right:2px solid #247B8A;
+		margin-left:6px;
+	}
+	.CouPonUse_form_title_con1,.CouPonUse_form_title_con2
+	,.CouPonUse_form_title_con3,.CouPonUse_form_title_con4{
+		display:block;
+		color:#247B8A;
+		font-size:13px;
+		font-weight:bold;
+		line-height:60px;
+		text-align:center;
+	}
+	.CouPonUse_form_conTot{
+		display:inline-block;
+		width:65%;
+		border-top:1px solid #C3C3C3;
+		border-bottom:1px solid #C3C3C3;
+		margin-left:-4px;
+	}
+	.CouPonUse_form_con_con1,.CouPonUse_form_con_con2
+	,.CouPonUse_form_con_con3{
+		display:block;
+		color:#747474;
+		font-size:13px;
+		line-height:60px;
+		text-align:center;
+	}
+	.CouPonUse_form_con_con4{
+		width:80%;
+		margin-left:10%;
+		line-height:60px;
+		list-style-type:none;
+		background-color:#9D3636;
+		color:#fff;
+		font-size:13px;
+		text-align:center;
+	}
+}
+@media all and (min-width:591px){
+	.CouPonUse_form_titleTot{
+		margin:auto;
+		width:95%;
+		height:39px;
+		border-top:1px solid #C3C3C3;
+		border-bottom:2px solid #247B8A;
+	}
+	.CouPonUse_form_title_con1,.CouPonUse_form_title_con2
+	,.CouPonUse_form_title_con3,.CouPonUse_form_title_con4{
+		display:inline-block;
+		color:#247B8A;
+		font-size:13px;
+		font-weight:bold;
+	}
+	.CouPonUse_form_title_con1,.CouPonUse_form_title_con2{
+		width:27%;
+		line-height:35px;
+		text-align:center;
+	}
+	.CouPonUse_form_title_con3{
+		width:22%;
+		line-height:35px;
+		text-align:center;
+	}
+	.CouPonUse_form_title_con4{
+		width:21%;
+		line-height:35px;
+		text-align:center;
+	}
+	.CouPonUse_form_conTot{
+		margin:auto;
+		width:95%;
+		height:41px;
+		border-bottom:1px solid #C3C3C3;
+	}
+	.CouPonUse_form_con_con1,.CouPonUse_form_con_con2
+	,.CouPonUse_form_con_con3,.CouPonUse_form_con_con4{
+		display:inline-block;
+		color:#747474;
+		font-size:13px;
+	}
+	.CouPonUse_form_con_con1,.CouPonUse_form_con_con2{
+		width:27%;
+		line-height:40px;
+		text-align:center;
+	}
+	.CouPonUse_form_con_con3{
+		width:22%;
+		line-height:40px;
+		text-align:center;
+	}
+	.CouPonUse_form_con_con4{
+		width:21%;
+		line-height:30px;
+		text-align:center;
+		background-color:#9D3636;
+		color:#fff;
+		cursor:pointer;
+	}
+}
+.CouPonUse_form_con_con4:hover{
+	background-color:#620000;
+}
+.CouPonUse_form_CouPonInfo{
+	margin:auto;
+	width:95%;
+	list-style-type:none;
+	margin-top:25px;
+	margin-bottom:7px;
+	color:#4C4C4C;
+	font-size:14px;
+}

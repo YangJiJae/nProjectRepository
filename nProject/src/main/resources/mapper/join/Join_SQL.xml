@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="join">
+	
+	<insert id="insertJoinGo" parameterType="hashmap">
+		<![CDATA[
+			
+			INSERT INTO MEMBER
+			(
+				CUS_ID
+				,PWD
+				,JOIN_DT_TM
+				,PHONE_NUM
+				,NAME
+				,USE_YN
+				,REG_DT_TM
+				,CHG_DT_TM
+			)
+			VALUES
+			(
+				#{CUS_ID}
+				,#{PWD}
+			    ,CURRENT_TIMESTAMP
+			    ,#{PHONE_NUM}
+			    ,#{NAME}
+			    ,'Y'
+			    ,CURRENT_TIMESTAMP
+			    ,CURRENT_TIMESTAMP
+			);
+		]]>
+	</insert>
+	
+	<insert id="insertComJoinGo" parameterType="hashmap">
+		<![CDATA[
+			
+			INSERT INTO COMPANY
+			(
+				COM_ID
+				,PWD
+				,JOIN_DT_TM
+				,PHONE_NUM
+				,EMAIL
+				,NAME
+				,COM_NM
+				,ADDRESS
+				,TEL_NUM
+				,COM_ID_CERT_YN
+				,USE_YN
+				,REG_DT_TM
+			)
+			VALUES
+			(
+				#{COM_ID}
+				,#{PWD}
+			    ,CURRENT_TIMESTAMP
+			    ,#{PHONE_NUM}
+				,#{EMAIL}
+			    ,#{NAME}
+			    ,#{COM_NM}
+			    ,#{ADDRESS}
+			    ,#{TEL_NUM}
+			    ,'N'
+			    ,'Y'
+			    ,CURRENT_TIMESTAMP
+			);
+		]]>
+	</insert>
+	
+	<select id="selectCusId" parameterType="hashmap" resultType="hashmap">
+		<![CDATA[
+			SELECT
+				COUNT(CUS_ID) AS CNT
+			FROM
+				MEMBER
+			WHERE
+				CUS_ID = #{ID}		
+		]]>
+	</select>
+	
+	<select id="selectComId" parameterType="hashmap" resultType="hashmap">
+		<![CDATA[
+			SELECT
+				COUNT(COM_ID) AS CNT
+			FROM
+				COMPANY
+			WHERE
+				COM_ID = #{ID}		
+		]]>
+	</select>
+</mapper>

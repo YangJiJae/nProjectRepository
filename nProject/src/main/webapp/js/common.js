@@ -17,7 +17,6 @@ function ComSubmit(opt_formId) {
 		$("#commonForm")[0].reset();
 		$("#commonForm").empty();
 	}
-	
 	this.setUrl = function setUrl(url){
 		this.url = url;
 	};
@@ -34,7 +33,7 @@ function ComSubmit(opt_formId) {
 	};
 }
 
-var gfv_ajaxCallback = "";
+var fv_ajaxCallback= "";
 function ComAjax(opt_formId){
 	this.url = "";		
 	this.formId = gfn_isNull(opt_formId) == true ? "commonForm" : opt_formId;
@@ -73,7 +72,11 @@ function ComAjax(opt_formId){
 				else {
 					eval(fv_ajaxCallback + "(data);");
 				}
-			}
+			},
+			error : function(request,status,error){
+		        alert("code:"+request.status+"\n"+"message:"+request.responseText+"\n"+"error:"+error);
+		      }
+
 		});
 	};
 }

@@ -1,33 +1,65 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
-<% //get 한글깨짐 방지
-request.setCharacterEncoding("UTF-8");
-String myMenu = request.getParameter("myMenu");
-
-if(myMenu==null || myMenu.equals("")){
-	myMenu="menu1/myCuPon_form.jsp";
-}%>
 <!DOCTYPE html>
 <html>
 <head>
 <meta charset="UTF-8">
-<link href="../css/myPage/myPage.css" rel="stylesheet" type="text/css">
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+<%@ taglib prefix="fn" uri="http://java.sun.com/jsp/jstl/functions" %>  
+<%@ taglib prefix="ui" uri="http://egovframework.gov/ctl/ui" %>
+
+<link rel="stylesheet" type="text/css" href="<c:url value='/css/myPage/myPage.css'/>" />
+
+<!-- jQuery -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+<script src="<c:url value='/js/common.js'/>" charset="utf-8"></script>
+
+<script type="text/javascript">
+$(document).ready(function(){
+	
+	$("#myPage_con_left_menu1").on("click", function(e){
+		e.preventDefault();
+		var comSubmit = new ComSubmit();
+		comSubmit.setUrl("<c:url value='/myPage_form.do' />");
+		comSubmit.addParam("MY_MENU", "menu1/myCuPon_form.jsp");
+		comSubmit.submit();
+	});
+	
+	$("#myPage_con_left_menu2").on("click", function(e){
+		e.preventDefault();
+		var comSubmit = new ComSubmit();
+		comSubmit.setUrl("<c:url value='/myPage_form.do' />");
+		comSubmit.addParam("MY_MENU", "menu2/myEventAlert_form.jsp");
+		comSubmit.submit();
+	});
+	
+	$("#myPage_con_left_menu3").on("click", function(e){
+		e.preventDefault();
+		var comSubmit = new ComSubmit();
+		comSubmit.setUrl("<c:url value='/myPage_form.do' />");
+		comSubmit.addParam("MY_MENU", "menu3/myInfo_form.jsp");
+		comSubmit.submit();
+	});
+	
+});
+</script>
 </head>
+
 <body>
-	<div id="myPage_header">
-		<image id="myPage_header_titleImg" src="../lib/img/smallUser.png"></image>
-		<li id="myPage_header_title">나의 페이지 »</li>
+	<form id="commonForm" name="commonForm"></form>
+	<div class="myPage_header">
+		<img class="myPage_header_titleImg" src="<c:url value='/images/smallUser.png'/>"></img>
+		<li class="myPage_header_title">나의 페이지 »</li>
 	</div>
-	<div id="myPage_con">
-		<div id="myPage_con_left">
-			<li id="myPage_con_left_menu1" onclick="menuBtnGo('menu1/myCuPon_form.jsp')">나의 쿠폰</li>
-			<li id="myPage_con_left_menu2" onclick="menuBtnGo('menu2/myEventAlert_form.jsp')">이벤트 알림</li>
-			<li id="myPage_con_left_menu3" onclick="menuBtnGo('menu3/myInfo_form.jsp')">개인정보 수정</li>
+	<div class="myPage_con">
+		<div class="myPage_con_left">
+			<li class="myPage_con_left_menu1" id="myPage_con_left_menu1">나의 쿠폰</li>
+			<li class="myPage_con_left_menu2" id="myPage_con_left_menu2">이벤트 알림</li>
+			<li class="myPage_con_left_menu3" id="myPage_con_left_menu3">개인정보 수정</li>
 		</div>
-		<div id="myPage_con_right">
-			<jsp:include page="<%=myMenu%>" flush="false"/>
+		<div class="myPage_con_right">
+			<jsp:include page="${MY_MENU}" flush="false"/>
 		</div>
 	</div>
-<script src="../js/myPage/myPage.js"></script>
 </body>
 </html>

@@ -73,6 +73,8 @@
 		}
 		
 		function fn_selectBoardListCallback(data){
+			alert('abcd');
+			alert(data);
 			var total = data.TOTAL;
 			var body = $("table>tbody");
 			body.empty();
